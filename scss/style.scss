@@ -1,0 +1,278 @@
+
+@import "variable";
+
+body{
+    // font-family: 'Roboto', sans-serif;
+    // font-family: 'Courgette', cursive;
+    font-family: 'Andika New Basic', sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+.background-img{
+    width: 100%;
+    height: 100vh;
+    background-image: url(/images/water.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+.fish-1{
+    background-image: url(/images/fish.png);
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+    /* background-size: cover; */
+    /* background-position: center; */
+    z-index: 1;
+    top: 20px;
+    left: 70px;
+    animation-name: move-left;
+    animation-iteration-count: infinite;
+    animation-duration: 5s,1s, 0s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+
+}
+@keyframes move-left{
+    0%{
+        /* left: -10%; */
+        top: 50px;
+    }
+    50%{
+        left: -30%;
+        top: -50px;
+    }
+    100%{
+        left: -100%;
+        top: 50px;
+    }
+}
+
+.fish-2{
+    background-image: url(/images/fish-2.png);
+    position: absolute;
+    width: 700px;
+    height: 500px;
+    object-fit: cover;
+    z-index: 1;
+    top: 50px;
+    left: 700px;
+    animation-name: move-right;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    /* animation-duration: 7s; */
+
+}
+
+@keyframes move-right{
+    0%{
+        /* right: 10%; */
+        /* left: 10%; */
+        /* right: 700px; */
+        // right: 5%;
+        // top: -5px;
+    }
+    50%{
+        left: 30%;
+        top: 5px;
+    }
+    100%{
+        left: 100%;
+        top: -5px;
+    }
+    
+    
+}
+
+.fish-3{
+    background-image: url(/images/fish-3.png);
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    /* background-size: cover; */
+    /* background-position: center; */
+    z-index: 1;
+    /* border: 2px solid red; */
+    top: 300px;
+    left: 700px;
+    animation-name: move-left-3;
+    animation-iteration-count: infinite;
+    animation-duration: 9s;
+    animation-timing-function: linear;
+    
+    /* animation-delay: 3s; */
+
+}
+@keyframes move-left-3{
+    0%{
+        /* left: 0%; */
+        /* top: 2px; */
+    }
+    50%{
+        left: -70%;
+        top: 150px 
+    }
+    100%{
+        left: -100%;
+        top: 200px;
+    }
+    
+    
+}
+
+.cardImg{
+    height: 246px;
+}
+
+nav{
+    z-index: 3;
+    position: absolute;
+}
+
+// .nav{
+//     position: absolute;
+//     li{
+//         
+//     }
+// }
+
+
+.jumbotron{
+    position: relative;
+    // z-index:-101;
+    background: white;
+    height: 500px;
+    width: 100%;
+    overflow: hidden;
+    #video-background{
+        overflow: hidden;
+        position: relative;
+    }
+    h1{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 50%;
+        transform: translatex(-50%);
+        z-index: 2;
+        font-weight: 800;
+               
+    }
+}
+
+#formModal{
+    z-index: 100;
+}
+
+.joinUs{
+    img{
+        background-color: turquoise;
+    }
+    p{
+        font-size: 25px;
+    }
+   
+}
+
+
+.custom-shape-divider-top-1609310690 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1609310690 svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 104px;
+}
+
+.custom-shape-divider-top-1609310690 .shape-fill , .custom-shape-divider-bottom-1609310910 .shape-fill {
+    fill: #FFFFFF;
+}
+
+
+
+.custom-shape-divider-bottom-1609310910 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1609310910 svg {
+    position: relative;
+    display: block;
+    width: calc(137% + 1.3px);
+    height: 104px;
+}
+
+footer{
+    i{
+        font-size: 25px;
+    }
+    
+}
+
+
+.subscribe{
+    position: relative;
+    height: 50px;
+    display: inline-block;
+    .input{
+        height: 50px;
+        width: 50px;
+        border: 0;
+        transition: width 0.3s ease-in;
+        padding: 10px;
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+    }
+    .btn{
+        position: absolute;
+        transition: transform 0.3s ease-in;
+        top: 0px;
+        left: 0px;
+        
+    }
+
+}
+
+.subscribe{
+    .btn:focus{
+        outline: none;
+    }
+    .input:focus{
+        outline: none;
+    }
+}
+
+.subscribe.active .input{
+    width: 350px;
+}
+
+.subscribe.active .btn{
+    transform: translateX(350px);
+}
+
+
+@media(max-width:775px){
+    .subscribe.active .input{
+        width: 200px;
+    }
+    .subscribe.active .btn{
+        transform: translateX(200px);
+    }
+}
