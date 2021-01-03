@@ -1,10 +1,10 @@
 
-@import "variable";
+$color-primary: #1490A9;
+$color-secoundary: #04CFDD;
 
 body{
-    // font-family: 'Roboto', sans-serif;
-    // font-family: 'Courgette', cursive;
-    font-family: 'Andika New Basic', sans-serif;
+    font-family: 'Redressed', cursive;
+    // font-family: 'Playfair Display', serif;
     box-sizing: border-box;
 }
 
@@ -32,7 +32,7 @@ body{
     left: 70px;
     animation-name: move-left;
     animation-iteration-count: infinite;
-    animation-duration: 5s,1s, 0s;
+    animation-duration: 7s,5s, 2s;
     animation-timing-function: linear;
     animation-delay: 1s;
 
@@ -65,6 +65,8 @@ body{
     animation-iteration-count: infinite;
     animation-duration: 10s;
     /* animation-duration: 7s; */
+    // animation-direction: reverse;
+    // animation-fill-mode: backwards;
 
 }
 
@@ -102,15 +104,16 @@ body{
     left: 700px;
     animation-name: move-left-3;
     animation-iteration-count: infinite;
-    animation-duration: 9s;
+    animation-duration: 10s ,7s ,5s;
     animation-timing-function: linear;
+    // animation-direction: reverse;
     
     /* animation-delay: 3s; */
 
 }
 @keyframes move-left-3{
     0%{
-        /* left: 0%; */
+        // /* left: 0%; */
         /* top: 2px; */
     }
     50%{
@@ -127,11 +130,17 @@ body{
 
 .cardImg{
     height: 246px;
+    
 }
 
 nav{
     z-index: 3;
     position: absolute;
+    background-color: $color-secoundary;
+    // background-color: transparent;
+    span{
+        background-color: black;
+    }
 }
 
 // .nav{
@@ -142,6 +151,25 @@ nav{
 // }
 
 
+#collapse-section{
+    .collapse-img{
+        display: block;
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+        margin: auto;
+    }
+    p{
+        font-size: 20px;
+    }
+    .btn-link{
+        font-size: 22px;
+    }
+
+}
+
+
+
 .jumbotron{
     position: relative;
     // z-index:-101;
@@ -149,10 +177,7 @@ nav{
     height: 500px;
     width: 100%;
     overflow: hidden;
-    #video-background{
-        overflow: hidden;
-        position: relative;
-    }
+    
     h1{
         position: absolute;
         top: 50%;
@@ -170,11 +195,13 @@ nav{
 }
 
 .joinUs{
-    img{
-        background-color: turquoise;
-    }
+    
     p{
         font-size: 25px;
+        color: $color-primary;
+    }
+    h3{
+        color: $color-primary;
     }
    
 }
@@ -220,6 +247,7 @@ nav{
 }
 
 footer{
+    background-color: $color-primary;
     i{
         font-size: 25px;
     }
@@ -231,20 +259,26 @@ footer{
     position: relative;
     height: 50px;
     display: inline-block;
+    left: 50px;
+    transform: translateX(-50px);
+    margin-bottom: 50px;
     .input{
-        height: 50px;
+        height: 45px;
         width: 50px;
         border: 0;
         transition: width 0.3s ease-in;
         padding: 10px;
-        border-top-left-radius: 25px;
-        border-bottom-left-radius: 25px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        // left: 50px;
+        // transform: translateX(-50px);
     }
     .btn{
         position: absolute;
         transition: transform 0.3s ease-in;
         top: 0px;
         left: 0px;
+        background-color: $color-secoundary;
         
     }
 
@@ -260,11 +294,11 @@ footer{
 }
 
 .subscribe.active .input{
-    width: 350px;
+    width: 300px;
 }
 
 .subscribe.active .btn{
-    transform: translateX(350px);
+    transform: translateX(300px);
 }
 
 
@@ -274,5 +308,37 @@ footer{
     }
     .subscribe.active .btn{
         transform: translateX(200px);
+    }
+    .jumbotron{
+        h1{
+            font-size: 20px;
+            font-weight: 500;
+        }
+    }
+}
+
+@media(max-width:550px){
+    .subscribe.active .input{
+        width: 150px;
+    }
+    .subscribe.active .btn{
+        transform: translateX(150px);
+    }
+    .subscribe{
+        .btn{
+            width:100px;
+            font-size: 17px;
+        }
+        .input{
+            height: 40px;
+        }
+    }
+    #collapse-section{
+        .collapse-img{
+            
+            
+            height: 300px;
+            
+        }
     }
 }

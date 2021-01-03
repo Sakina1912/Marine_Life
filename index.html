@@ -8,34 +8,34 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <!--Style CSS-->
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/scss/style.css">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <!--Google Fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <title>Marine Life</title>
   </head>
   <body>
       <!--nav bar-->
-    <nav class="navbar navbar-dark navbar-expand-md bg-dark ">
-      <a class="navbar-brand text-primary" href="#">MARINE LIFE</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#marineNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-dark navbar-expand-md ">
+      <a class="navbar-brand text-white ml-3" href="#">MARINE LIFE</a>
+      <button class="navbar-toggler " type="button" data-toggle="collapse" data-target="#marineNavbar" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="marineNavbar">
-          <ul class="navbar-nav text-primary mr-auto">
+          <ul class="navbar-nav text-primary ml-auto">
               <li class="nav-item">
-                  <a href="#" class="nav-link text-white">HOME</a>
+                  <a href="/index.html" class="nav-link text-white">HOME</a>
               </li>
               <li class="nav-item">
-                  <a href="#" class="nav-link text-white">WHAT WE DO</a>
+                  <a href="#collapse-section" class="nav-link text-white">WHAT WE DO</a>
               </li>
               <li class="nav-item">
-                  <a href="#" class="nav-link text-white">JOIN US</a>
+                  <a href="#joinUs-1" class="nav-link text-white">JOIN US</a>
               </li>
               <li class="nav-item">
-                  <a href="#" class="nav-link text-white" data-toggle="modal" data-target="#formModal">DONATE</a>
+                  <a href="#" class="nav-link text-white" data-toggle="modal" type="button" data-target="#donation-modal">DONATE</a>
               </li>
           </ul>
       </div>
@@ -55,11 +55,11 @@
  </div>
  <!--first row-->
     <div class="container">
-      <h2 class="text-center text-secondary my-4">Ocean-Friendly Habits To Help Protect Marine life</h2>
+      <h1 class="text-center text-primary my-4">Ocean-Friendly Habits To Help Protect Marine life</h1>
       <div class="row">
           <div class="col-lg-4 col-md-6 p-3">
               <div class="card">
-                  <img src="https://images.pexels.com/photos/4289045/pexels-photo-4289045.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top img-fluid">
+                  <img src="https://images.pexels.com/photos/4289045/pexels-photo-4289045.png?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="card-img-top img-fluid cardImg">
                   <div class="card-body">
                       <h5 class="card-title">Save Water</h5>
                       <p class="card-text lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. At eos necessitatibus laudantium aspernatur.</p>
@@ -90,9 +90,9 @@
   </div>
   </div>
   <!--what we do section containing collapse in bootstrap-->
-  <section>
+  <section id="collapse-section">
     <div class="container">
-        <h1 class="text-secondary text-center">WHAT WE DO</h1>
+        <h2 class="text-primary text-center mt-3">WHAT WE DO</h2>
         <p class="lead text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quis nulla doloribus magni. Accusantium corrupti ducimus quis quidem itaque voluptates aspernatur ipsa! Magni, dolorum voluptas? Ex ullam itaque, libero id eos voluptatum, molestiae, officiis ducimus dolorem doloremque nihil beatae eius.</p>
         <div class="accordion" id="firstAccordion">
             <div class="card">
@@ -105,8 +105,8 @@
                 </div>
                 <div id="collapse-one" class="collapse show" aria-labelledby="heading-one" data-parent="#firstAccordion">
                     <div class="card-body">
-                        <img src="https://images.pexels.com/photos/5486950/pexels-photo-5486950.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="img-fluid">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam dolore illum itaque, iure quibusdam quis sequi totam eos nemo, numquam, amet quia deleniti incidunt ratione cupiditate ducimus odio? Accusantium, voluptas.</p>
+                        <img src="https://images.pexels.com/photos/5487074/pexels-photo-5487074.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="" class="img-fluid collapse-img">
+                        <p class="mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam dolore illum itaque, iure quibusdam quis sequi totam eos nemo, numquam, amet quia deleniti incidunt ratione cupiditate ducimus odio? Accusantium, voluptas.</p>
                     </div>
                 </div>
             </div>
@@ -120,8 +120,8 @@
               </div>
               <div id="collapse-two" class="collapse show" aria-labelledby="heading-two" data-parent="#firstAccordion">
                   <div class="card-body">
-                      <img src="https://images.pexels.com/photos/162079/dolphin-sea-marine-mammals-wise-162079.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-fluid">
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam dolore illum itaque, iure quibusdam quis sequi totam eos nemo, numquam, amet quia deleniti incidunt ratione cupiditate ducimus odio? Accusantium, voluptas.</p>
+                      <img src="https://images.pexels.com/photos/162079/dolphin-sea-marine-mammals-wise-162079.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="img-fluid collapse-img">
+                      <p class="mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam dolore illum itaque, iure quibusdam quis sequi totam eos nemo, numquam, amet quia deleniti incidunt ratione cupiditate ducimus odio? Accusantium, voluptas.</p>
                   </div>
               </div>
           </div>
@@ -135,8 +135,8 @@
             </div>
             <div id="collapse-three" class="collapse show" aria-labelledby="heading-three" data-parent="#firstAccordion">
                 <div class="card-body">
-                    <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid">
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam dolore illum itaque, iure quibusdam quis sequi totam eos nemo, numquam, amet quia deleniti incidunt ratione cupiditate ducimus odio? Accusantium, voluptas.</p>
+                    <img src="https://images.pexels.com/photos/2280571/pexels-photo-2280571.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" class="img-fluid collapse-img text-center">
+                    <p class="mt-3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam dolore illum itaque, iure quibusdam quis sequi totam eos nemo, numquam, amet quia deleniti incidunt ratione cupiditate ducimus odio? Accusantium, voluptas.</p>
                 </div>
             </div>
         </div>
@@ -145,15 +145,13 @@
 </section>
 <!--jumbotron-->
 <div class="jumbotron jumbotron-fluid my-4" id="save">
-  <video id="video-background" preload muted autoplay loop>
-      <source src="https://www.pexels.com/video/colorful-marine-fishes-inside-an-aquarium-3610326/" >
-  </video>
+    <embed src="https://media.giphy.com/media/ZTAojHK9IHsSQ/giphy.gif" width="100%" height="1000px">
   <div class="container">
       <h1 class="text-center text-white">LET’S BE THE FIRST GENERATION TO SAVE MARINE LIFE</h1>
   </div>
 </div>
 <!--join us section-->
-<section class="joinUs">
+<section class="joinUs" id="joinUs-1">
   <h1 class="text-primary text-center my-4 pt-3">Ways to Give</h1>
   <div class="container">
       <div class="row">
@@ -209,7 +207,7 @@
   </div>
 </section>
 <!--footer section-->
-<footer class=" bg-secondary text-white mt-4">
+<footer class=" text-white mt-4">
   <div class="container">
       <div class="d-flex flex-wrap text-center justify-content-around pt-4 px-5">
           <h5><i class="fas fa-map-marker-alt"></i> 456 xyz street<br>
@@ -226,42 +224,68 @@
               </div>
               <h3 class="mt-4">Sign up for Updates</h3>
               <div class="subscribe">
-              <input type="email" class="input" placeholder="Email">
-              <button class="btn btn-lg btn-info">Subscribe</button>
+                <input type="email" class="input" placeholder="Email">
+                <button class="btn btn-lg text-white">Subscribe</button>
               </div>
           </div>
       </div>
   </div>
 </footer>
 <!--modal-->
-<div class="modal" id="formModal" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-      <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title">Marine Care Fund</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </div>
-          <div class="modal-body">
-              <p>Please fill out the form below and we will get back to you as soon as possible</p>
-              <form>
-                <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" class="form-control" id="email" placeholder="name@example.com">
-                </div>
-                <div class="form-group">
-                  <label for="numberOfChildrens">Number Of Childrens</label>
-                  <input type="number" class="form-control" id="numberOfChildrens" value="1">
-                </div>
-                <div class="form-group">
-                  <label for="note" class="form-control">Additional Requests</label>
-                  <textarea name="" id="note" cols="50" rows="3"></textarea>
-                </div>
-              </form>
+<div class="modal fade" id="donation-modal" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Marine Care Fund</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-      </div>
-  </div>
+            <div class="modal-body">
+                <small>Please fill the form and we will get back to you</small>
+                <form class="mt-3">
+                    <div class="form-group">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="gridCheck">
+                          <label class="form-check-label" for="gridCheck">
+                            Dedicate my donation in honor or in memory of someone
+                          </label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="Email" required>
+                        <small>Your receipt will be emailed here.</small>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Address" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Address 2">
+                    </div>
+                    <div class="row">
+                        <div class="col-8">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="City" required>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="form-group">
+                                <input type="number" class="form-control" placeholder="Pincode" required>
+                            </div>
+                        </div>
+                    </div>
+                    <small>Thank you for your helping hand</small>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Donate</button>
+            </div>
+        </div>
+    </div>
 </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
@@ -272,10 +296,10 @@
 
     <!--java script for the page-->
     <script>
-      var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
-      var collapseList = collapseElementList.map(function (collapseEl) {
-        return new bootstrap.Collapse(collapseEl)
-      })
+    //   var collapseElementList = [].slice.call(document.querySelectorAll('.collapse'))
+    //   var collapseList = collapseElementList.map(function (collapseEl) {
+    //     return new bootstrap.Collapse(collapseEl)
+    //   })
       // $('#myCollapsible').collapse({
       //     toggle: false
       // })
@@ -283,7 +307,7 @@
 
       //script for subscribe
       const sub = document.querySelector('.subscribe')
-      const btn = document.querySelector('.btn-info')
+      const btn = document.querySelector('.btn-lg')
       const inputText = document.querySelector('.input')
 
       btn.addEventListener('click', () => {
